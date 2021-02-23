@@ -9,6 +9,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class KlfSpringBootTest {
 
     public static void main(String[] args) {
+        System.out.println("Here we go!");
         SpringApplication.run(KlfSpringBootTest.class, args);
     }
 }
