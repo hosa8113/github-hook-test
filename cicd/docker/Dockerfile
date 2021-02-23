@@ -2,8 +2,8 @@ FROM openjdk:14-jdk-alpine as build
 RUN apk add maven
 WORKDIR /workspace/app
 
-COPY ../../pom.xml .
-COPY ../../src src
+COPY pom.xml .
+COPY src src
 
 RUN mvn install -DskipTests
 RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
